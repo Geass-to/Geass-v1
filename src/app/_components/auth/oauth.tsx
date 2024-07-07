@@ -7,6 +7,7 @@ type OAuthProvider = {
   name: Provider;
   displayName: string;
   icon?: JSX.Element;
+  color?: string;
 };
 
 export function OAuthButtons() {
@@ -14,17 +15,20 @@ export function OAuthButtons() {
     {
       name: "google",
       displayName: "Google",
-      icon: <GoogleLogo size={32} weight="bold" />
+      icon: <GoogleLogo size={32} color="white" weight="bold" />,
+      color: "#6c40b9"
     },
     {
       name: "github",
       displayName: "GitHub",
-      icon: <GithubLogo size={32} weight="bold" />
+      icon: <GithubLogo size={32} color="black" weight="fill" />,
+      color: "#c6c7f8"
     },
     {
       name: "twitter",
       displayName: "Twitter",
-      icon: <TwitterLogo size={32} weight="bold" />
+      icon: <TwitterLogo size={32} color="white" weight="fill" />,
+      color: "#24a4f2"
     }
   ];
   return (
@@ -35,7 +39,8 @@ export function OAuthButtons() {
             await oAuthSignIn(provider.name);
           }}
           key={index}
-          className="rounded-xl bg-violet-300 px-7 py-2"
+          style={{ backgroundColor: provider.color }}
+          className="rounded-xl px-7 py-2"
         >
           {provider.icon}
         </button>
