@@ -1,8 +1,8 @@
-import { OAuthButtons } from "@/app/_components/auth/oauth";
-import { emailSignup, emailLogin } from "../../(auth)/login/actions";
 import { Button } from "@nextui-org/button";
 import Image from "next/image";
 import { Input, Link } from "@nextui-org/react";
+import { OAuthButtons } from "./oauth";
+import { emailLogin } from "@/app/(auth)/login/actions";
 
 const LoginBox = () => {
   return (

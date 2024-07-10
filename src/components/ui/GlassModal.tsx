@@ -1,4 +1,4 @@
-import styles from "../../../styles/GlassModal.module.css";
+import styles from "../../styles/GlassModal.module.css";
 
 interface GlassModalProps {
   width?: number;

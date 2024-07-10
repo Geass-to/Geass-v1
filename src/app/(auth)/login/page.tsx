@@ -1,6 +1,6 @@
+import LoginBox from "@/components/auth/LoginBox";
+import GlassModal from "@/components/ui/GlassModal";
 import Image from "next/image";
-import GlassModal from "@/app/_components/ui/GlassModal";
-import LoginBox from "@/app/_components/auth/LoginBox";
 
 export default function LoginPage() {
   return (
