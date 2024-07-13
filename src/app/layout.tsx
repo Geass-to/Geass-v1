@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
-import { GeistSans } from "geist/font/sans";
 import { TRPCReactProvider } from "@/trpc/react";
 import { NextUIProvider } from "@nextui-org/react";
+import localFont from "next/font/local";
 
 export const metadata = {
   title: "Geass App",
@@ -9,9 +9,21 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }]
 };
 
+const Chillax = localFont({
+  src: "../../public/fonts/Chillax-Variable.ttf",
+  display: "swap",
+  variable: "--font-chillax"
+});
+
+const Satoshi = localFont({
+  src: "../../public/fonts/Satoshi-Variable.ttf",
+  display: "swap",
+  variable: "--font-satoshi"
+});
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${GeistSans.variable}`}>
+    <html lang="en" className={`${Satoshi.variable} ${Chillax.variable}`}>
       <body className="dark">
         <TRPCReactProvider>
           <NextUIProvider>{children}</NextUIProvider>
