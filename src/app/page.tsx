@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import { api } from "@/trpc/server";
+import BookCard from "@/components/ui/BookCard";
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
 
@@ -16,7 +16,12 @@ export default async function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-background text-white">
-      <Navbar />
+      <Navbar userData={user} />
+      <BookCard
+        image="https://static-cse.canva.com/blob/1427892/ColorfulIllustrationYoungAdultBookCover.jpg"
+        title="The Hypocrite  world"
+        volume={10}
+      />
     </main>
   );
 }
